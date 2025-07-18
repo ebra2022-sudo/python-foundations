@@ -1,0 +1,62 @@
+Runtime & Execution Model – Python
+
+Compiled or Interpreted
+Python is primarily interpreted, but it also involves a compilation step.
+
+Python source code (.py files) is compiled to bytecode (.pyc files).
+
+This bytecode is then interpreted by the Python Virtual Machine (PVM).
+
+So, Python can be considered a compiled-to-bytecode interpreted language.
+
+Target Format (Bytecode, native binary, JS, IR)
+Python compiles to bytecode as an intermediate representation.
+
+This bytecode is portable across platforms but must be executed by a compatible interpreter (e.g., CPython).
+
+Python does not produce native binaries by default.
+
+Tools like PyInstaller or Nuitka can package Python apps as executables.
+
+Virtual Machine / Runtime (e.g., JVM, CLR, CPython, Node.js)
+The standard Python runtime is CPython, written in C.
+
+Other runtimes include PyPy (with JIT), Jython (on JVM), IronPython (on .NET CLR), and MicroPython (for microcontrollers).
+
+CPython is the reference implementation and most widely used.
+
+Performance Characteristics
+Python is not known for raw performance compared to compiled languages like C++ or Rust.
+
+Execution is slower due to dynamic typing, interpreted nature, and runtime checks.
+
+Performance can be improved using tools like NumPy, Cython, or switching to PyPy.
+
+Startup Time
+Python has a moderate startup time, not as fast as Go or C but better than Java in many cases.
+
+For short-lived scripts, the startup overhead can be noticeable.
+
+Execution Speed
+Python's execution speed is moderate to slow, especially in compute-heavy loops.
+
+This is due to the interpreter overhead and dynamic typing.
+
+Heavy numerical workloads often rely on compiled C extensions (e.g., NumPy, pandas) for performance.
+
+Garbage Collection Mechanism
+Python uses a reference counting system with a cyclic garbage collector.
+
+Every object has a reference count; when it drops to zero, the object is immediately deallocated.
+
+A cycle detector handles reference cycles (e.g., objects referencing each other).
+
+The gc module provides manual control over the collector.
+
+Just-In-Time (JIT) or Ahead-of-Time (AOT)
+Standard CPython does not use JIT or AOT compilation.
+
+PyPy is a Python interpreter with a JIT compiler and offers significant speed-ups for long-running applications.
+
+Some tools like Nuitka and Cython offer AOT compilation into C/C++ code, improving execution speed and optionally creating binaries.
+
