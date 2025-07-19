@@ -12,7 +12,8 @@ So, Python can be considered a compiled-to-bytecode interpreted language.
 Target Format (Bytecode, native binary, JS, IR)
 Python compiles to bytecode as an intermediate representation.
 
-This bytecode is portable across platforms but must be executed by a compatible interpreter (e.g., CPython).
+This bytecode is portable across platforms but
+must be executed by a compatible interpreter (e.g., CPython).
 
 Python does not produce native binaries by default.
 
