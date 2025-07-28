@@ -1,6 +1,6 @@
 """
 variable_scope_rule.py
-the scoping rules in python from basic to advanced
+variable scoping rules in python from basic to advanced
 """
 # Scope defines where in your code a variable is visible or accessible
 # Python’s 4 Levels of Scope – The LEGB Rule
